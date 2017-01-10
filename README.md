@@ -14,8 +14,8 @@ $upload = new Upload('documents', $_FILES['file']);
 $upload->upload();
 ```
 To upload your file, you juste have to include and instantiate the class with 2 parameters ;
-1. First is the destination directory
-2. Second is the $_FILES variable
+* 1. First is the destination directory
+* 2. Second is the $_FILES variable
 
 > Don't forget ! To upload a file from a HTML form, you have to add this code to the form tag : enctype="multipart/form-data"
 
@@ -50,9 +50,9 @@ Upload result is returned by the upload() method.
 $result = $upload->upload();
 ```
 This var can be :
-• An array containing errors
-• TRUE if the upload is ok
-• FALSE in case of internal error
+* An array containing errors
+* TRUE if the upload is ok
+* FALSE in case of internal error
 
 ### Example do display result
 ```php
