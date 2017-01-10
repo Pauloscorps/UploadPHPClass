@@ -37,11 +37,11 @@ $upload->set_max_size_allowed(200000);
 ### Define custom name for the final file
 You can choose the final name of your file usgin set_name() function.
 ```php
-$upload->set_name(‘Mon fichier de test !’, true);
+$upload->set_name(‘My test file!’, true);
 ```
 The second param (default : false) allows you to define if the file name must be rewriten. If your sure of the name given in the first param, do :
 ```php
-$upload->set_name(‘mon-fichier-de-test');
+$upload->set_name(‘mon-test-file');
 ```
 
 ## Result
@@ -57,16 +57,16 @@ This var can be :
 ### Example do display result
 ```php
 <?php if(is_array($result)) { ?>
-<h3>Erreur</h3>
+<h3>Error</h3>
 <ol>
 <?php foreach($result AS $k => $error) { ?>
 <li><?php echo $error; ?></li>
 <?php } ?>
 </ol>
 <?php } else if($result === true) { ?>
-<p>Fichier envoyé !</p>
+<p>File uploaded !</p>
 <?php } else { ?>
-<p>Erreur interne !</p>
+<p>Internal error !</p>
 <?php } ?>
 ```
 
